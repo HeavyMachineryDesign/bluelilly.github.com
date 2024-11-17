@@ -1,199 +1,138 @@
-/* Global Styling */
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    font-family: 'Poppins', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    padding-top: 150px; /* Adjust based on header height */
+    background-color: #f0f8ff; /* Light blue background */
     line-height: 2;
-    width: 100%;
 }
 
-/* Section Styling */
-section {
-    scroll-margin-top: 150px; /* Offset for smooth scroll to sections */
-    width: 90%;
-    margin: 20px auto; /* Centers the section with top/bottom margin */
-}
-
-/* Header Styling */
 header {
-    background: linear-gradient(90deg, #141e30, #243b55);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
-    position: fixed;
+    background: linear-gradient(90deg, #2b5876, #4e4376); /* Deep blue header */
+    color: white;
+    padding: 20px;
     text-align: center;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    line-height: 1.5;
 }
 
-header h1 {
+h1 {
     margin: 0;
+}
+
+.decorative-name {
     font-size: 2.5em;
     font-weight: bold;
-    color: #fff;
+    color: #ffdd57; /* Yellow accent for contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
 }
 
-/* Toolbar Styling */
-.toolbar {
-    display: flex; /* Visible and horizontal for desktop */
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    background: linear-gradient(90deg, #141e30, #243b55);
+nav {
+    margin: 10px 0;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff; /* Corrected color */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.map {
     width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.toolbar li {
-    margin: 0 10px; /* Spacing between toolbar items */
-   position: relative;
-}
-
-.toolbar a {
-    text-decoration: none;
-    color: #fcf3cf;
-    font-size: .8em;
-    padding: 10px 25px;
-    transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-.toolbar a:hover,
-.toolbar a.active {
-    color: #40E0D0;
-    background-color: #092c42;
-    border-radius: 10px;
-    font-weight: bold;
-}
-
-/* Dropdown Menu */
-.dropdown-menu {
-    display: none; /* Hidden by default */
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color:  #283747;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    list-style: none;
-    padding:20px 0;
-    z-index: 1000;
-    min-width: 200px;
-    border-radius: 5px;
-}
-
-.dropdown-menu a {
-    display: block;
-    color: #fcf3cf;
-    padding: 8px 15px;
-white-space: nowrap;
-    transition: background-color 0.3s ease;
-}
-
-.dropdown-menu a:hover {
-    background-color: #092c42;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block; /* Show menu on hover */
-}
-
-/* Mobile Menu Toggle */
-.menu-toggle {
-    display: none; /* Hidden for desktop */
-    background-color: linear-gradient(90deg, #141e30, #243b55);
-    color: white;
+    height: 400px;
     border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 1.2em;
-}
-
-/* Back to Top Button */
-.back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 12px 20px;
-    background-color: #333;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 50px;
-    display: none; /* Initially hidden */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    font-size: 16px;
-    z-index: 1000;
-}
-
-.back-to-top.show {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.back-to-top:hover {
-    background-color: #555;
-    transform: scale(1.1);
-}
-
-/* Responsive Styling */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Visible in mobile view */
-    }
-
-    .toolbar {
-        display: none; /* Hidden by default on mobile */
-        flex-direction: column;
-        background-color: #333;
-        width: 100%;
-    }
-
-    .toolbar.active {
-        display: flex; /* Display when active */
-    }
-
-    .dropdown-menu {
-        position: static; /* Stack submenus in mobile view */
-    }
-
-    .dropdown:hover .dropdown-menu {
-        display: none; /* Disable hover in mobile */
-    }
-
-    .dropdown.active .dropdown-menu {
-        display: block; /* Show dropdown on click */
-    }
-}
-
-@media (max-width: 600px) {
-    .toolbar {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-}
-
-/* Back Button Styling */
-.back-button {
-    color: #fff;
-    font-size: 16px;
-    padding: 10px 20px;
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
-    margin-right: 20px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
 
-.back-button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+h2 {
+    color: #004e92; /* Deep blue for section headings */
+    margin-bottom: 10px;
+}
+
+.tourist-destinations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.destination {
+    background: #e6f7ff; /* Light cyan for tourist destinations */
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    width: calc(33% - 40px); /* Adjusted for spacing */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.destination h3 {
+    margin-top: 0;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.gallery img {
+    width: calc(33% - 20px); /* Adjusted for spacing */
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #004e92; /* Deep blue footer */
+    color: white;
+    position: relative;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery img, 
+    .destination {
+        width: calc(50% - 20px);
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery img, 
+    .destination {
+        width: calc(100% - 20px);
+    }
+
+    .decorative-name {
+        font-size: 2em;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
 }
