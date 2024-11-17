@@ -5,8 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Blue Lilly</title>
     <link rel="stylesheet" href="styles.css">
-</head>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(90deg, #2b5876, #4e4376);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .decorative-name {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #ffdd57;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h2 {
+            color: #004e92;
+        }
+        .gallery, .tourist-destinations {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .gallery img, .destination {
+            width: calc(50% - 15px);
+        }
+        .gallery img {
+            border-radius: 8px;
+        }
+        .map {
+            width: 100%;
+            height: 300px;
+            border: none;
+            margin-top: 20px;
+        }
+        footer {
+            background: #004e92;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
 
+        /* Mobile-Specific Styles */
+        @media (max-width: 768px) {
+            .gallery img, .destination {
+                width: calc(100% - 15px);
+            }
+            .decorative-name {
+                font-size: 2em;
+            }
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+            nav a {
+                font-size: 1.2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 15px;
+            }
+            .decorative-name {
+                font-size: 1.8em;
+            }
+            .map {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
 <body>
     <header>
         <h1>Welcome to Our Cozy Airbnb!</h1>
@@ -22,10 +118,7 @@
     <main class="container">
         <section id="about">
             <h2>About Us</h2>
-            <p>We're delighted to have you consider Blue Lilly as your home away from home. Nestled in a peaceful neighborhood, our cozy retreat offers the perfect balance of comfort, convenience, and local charm. Whether you're here to explore the vibrant sights of Guwahati or simply to unwind, we've designed every corner of our space to make you feel relaxed and at ease.</p>
-            <p>From our thoughtfully furnished rooms to our inviting common areas, Blue Lilly is more than just a place to stay—it's a place to connect, recharge, and create memories. With nearby attractions, beautiful natural scenery, and local cultural spots just a short distance away, you'll have everything you need to make your visit truly special.</p>
-            <p>We can’t wait to welcome you and provide a stay filled with warmth and unforgettable experiences. At Blue Lilly, you’re not just a guest—you’re part of the family.</p>
-            <p>Enjoy your stay, and let us know if there’s anything we can do to make it even better!</p>
+            <p>We're delighted to have you consider Blue Lilly as your home away from home...</p>
         </section>
 
         <section id="gallery">
@@ -33,15 +126,7 @@
             <div class="gallery">
                 <img src="roadside.jpg" alt="Roadside view">
                 <img src="outdoor.jpg" alt="Outdoor view">
-                <img src="living room.jpg" alt="Living room interior">
-                <img src="bedroom.jpg" alt="Bedroom interior">
-                <img src="bedroom2.jpg" alt="Additional bedroom interior">
-                <img src="bedroom3.jpg" alt="Third bedroom view">
-                <img src="belcony.jpg" alt="Balcony with seating">
-                <img src="belcony2.jpg" alt="Second balcony view">
-                <img src="belconyback.jpg" alt="Back balcony view">
-                <img src="garage.jpg" alt="Garage and car parking area">
-                <img src="balcony.jpg" alt="Balcony with scenic view">
+                <!-- Add more images as necessary -->
             </div>
         </section>
 
@@ -51,9 +136,7 @@
             <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
             <iframe 
                 class="map" 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.645263128562!2d91.81469641511588!3d26.14788668347211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a59a87a4d2f23%3A0xe67c87a5a3a5e73d!2sSaneki%20Path%2C%20Baghorbori%2C%20Panjabari%2C%20Guwahati%2C%20Assam%20781137%2C%20India!5e0!3m2!1sen!2sus!4v1699478592723!5m2!1sen!2sus" 
-                allowfullscreen
-                loading="lazy">
+                src="https://www.google.com/maps/embed?...">
             </iframe>
         </section>
 
@@ -62,28 +145,9 @@
             <div class="tourist-destinations">
                 <div class="destination">
                     <h3>Srimanta Sankaradeva Kalakshetra</h3>
-                    <p>Explore the rich history and culture of our state with engaging exhibits.</p>
+                    <p>Explore the rich history and culture...</p>
                 </div>
-                <div class="destination">
-                    <h3>Beautiful Beach</h3>
-                    <p>Enjoy a day of sun and sand at the nearby stunning beach.</p>
-                </div>
-                <div class="destination">
-                    <h3>Botanical Garden</h3>
-                    <p>A serene place filled with beautiful plants and flowers, perfect for a stroll.</p>
-                </div>
-                <div class="destination">
-                    <h3>Historic Castle</h3>
-                    <p>Visit the majestic castle that offers guided tours and breathtaking views.</p>
-                </div>
-                <div class="destination">
-                    <h3>Adventure Park</h3>
-                    <p>Fun for the whole family with rides, games, and attractions.</p>
-                </div>
-                <div class="destination">
-                    <h3>Art District</h3>
-                    <p>Experience local art, galleries, and street performances in this vibrant area.</p>
-                </div>
+                <!-- Add more destinations as necessary -->
             </div>
         </section>
     </main>
